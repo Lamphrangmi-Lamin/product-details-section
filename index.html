@@ -62,33 +62,36 @@
 
     <!-- Main content -->
     <div class="col-span-4">
-      <div class="">
-        <h1>Voyager Hoodie</h1>
-        <p class=""><span class="discounted-price">$76</span> <span class="original-price">$95</span></p>
-        <p>20% OFF</p>
+      <div class="mb-8">
+        <h1 class="text-3xl font-semibold mb-5 text-neutral-900">Voyager Hoodie</h1>
+        <p class="mb-2">
+          <span class="text-3xl font-medium text-neutral-600">$76</span>
+          <span class="text-lg font-medium text-neutral-400 line-through">$95</span>
+        </p>
+        <p class="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-full w-20 text-center py-1 mb-3">20% OFF</p>
         <p>
-          4.1
-          <span>
+          <span class="text-xl text-neutral-900">4.1</span>
+          <span class="mx-2 text-[20px]">
             <i class="ri-star-fill text-yellow-300"></i>
             <i class="ri-star-fill text-yellow-300"></i>
             <i class="ri-star-fill text-yellow-300"></i>
             <i class="ri-star-fill text-yellow-300"></i>
             <i class="ri-star-half-fill text-yellow-300"></i>
           </span>
-          See all 62 reviews
+          <span class="text-sm text-indigo-700">See all 62 reviews</span>
         </p>
       </div>
 
       <!-- Description -->
-      <div>
-        <p>The Voyager Hoodie is for the explorer at heart. Its durable fabric and roomy pockets are perfect for those
+      <div class="mb-8">
+        <p class="text-neutral-600">The Voyager Hoodie is for the explorer at heart. Its durable fabric and roomy pockets are perfect for those
           who are always searching for the next adventure.</p>
       </div>
 
       <!-- Color Options -->
-      <form action="|">
-        <fieldset>
-          <legend>Available Colors</legend>
+      <form class="mb-10" action="|">
+        <fieldset class="mb-8">
+          <legend class="text-sm text-neutral-500 mb-4">Available Colors</legend>
           <div class="">
             <input type="radio" name="color" id="color1" value="color1">
             <label for="color1">Color1</label>
@@ -96,9 +99,10 @@
             <label for="color2">Color2</label>
           </div>
         </fieldset>
+
         <!-- Size Options -->
-        <fieldset>
-          <legend>Available Colors</legend>
+        <fieldset class="mb-8">
+          <legend class="text-sm text-neutral-500 mb-4">Available Colors</legend>
           <div class="">
             <input type="radio" id="size-xs" name="size" value="XS">
             <label for="size-xs">XS</label>
@@ -113,23 +117,26 @@
             <label for="size-xl">XL</label>
           </div>
         </fieldset>
+
         <!-- Quantity -->
-        <label for="quantity">Quantity</label>
-        <div class="">
-          <button type="button">-</button>
-          <input id="quantity" min="1" value="1" max="10" type="number">
-          <button type="button">+</button>
+        <div class="mb-8">
+          <div class="mb-4"><label class="text-sm text-neutral-500" for="quantity">Quantity</label></div>
+          <div class="">
+            <button type="button">-</button>
+            <input id="quantity" min="1" value="1" max="10" type="number">
+            <button type="button">+</button>
+          </div>
         </div>
 
         <!-- Add to cart -->
-        <button type="submit">Add to Cart</button>
+        <button class="bg-indigo-700 text-white w-full rounded drop-shadow py-3" type="submit">Add to Cart</button>
       </form>
 
       <!-- Features -->
-      <div class="">
+      <div class="mb-8 flex justify-between">
         <div class="">
-          <p>Features</p>
-          <ul>
+          <p class="text-lg font-medium text-neutral-900 mb-2">Features</p>
+          <ul class="text-neutral-600 list-disc ml-5 max-w-64">
             <li>Designed for comfort and durability.</li>
             <li>Soft, breathable fabric ideal for travel and adventure.</li>
             <li>Large front pocket and adjustable hood.</li>
@@ -138,16 +145,16 @@
           </ul>
         </div>
         <!-- Toggle to collaspe button -->
-        <div class="">
-          <button>-</button>
-        </div>
+        <button class="text-xl text-neutral-400 flex">
+          <i class="ri-indeterminate-circle-line"></i>
+        </button>
       </div>
 
       <!-- Fabric & Care -->
-      <div class="">
+      <div class="mb-8 flex justify-between">
         <div class="">
-          <p>Fabric & Care</p>
-          <ul>
+          <p class="text-lg font-medium text-neutral-900 mb-2">Fabric & Care</p>
+          <ul class="text-neutral-600 list-disc ml-5 max-w-64">
             <li>Machine wash cold on a gentle cycle.</li>
             <li>Tumble dry low or hang to dry.</li>
             <li>Do not use fabric softeners or bleach.</li>
@@ -155,35 +162,36 @@
           </ul>
         </div>
         <!-- Toggle to collaspe button -->
-        <div class="">
-          <button>-</button>
-        </div>
+        <button class="text-xl text-neutral-400 flex">
+          <i class="ri-indeterminate-circle-line"></i>
+        </button>
       </div>
 
       <!-- Shipping -->
-      <div class="">
+      <div class="flex justify-between">
         <div class="">
-          <p>Shipping</p>
-          <ul>
+          <p class="text-lg font-medium text-neutral-900 mb-2">Shipping</p>
+          <ul class="text-neutral-600 list-disc ml-5 max-w-64">
             <li>Free standard shipping on all orders - no minimum spend required.</li>
             <li>Expedited shipping available at an additional cost.</li>
             <li>Packaged in biodegradable materials to reduce environmental impact.</li>
           </ul>
         </div>
         <!-- Toggle to collaspe button -->
-        <div class="">
-          <button>-</button>
-        </div>
+        <button class="text-xl text-neutral-400 flex">
+          <i class="ri-indeterminate-circle-line"></i>
+        </button>
       </div>
+
     </div>
   </div>
 
   <!-- Attribute this challenge to yourself! -->
-  <div class="credits">
+  <!-- <div class="credits">
     A challenge by
     <a href="https://www.greatfrontend.com/projects?ref=challenges" target="_blank">GreatFrontEnd Projects</a>. Built by
     <a href="https://www.greatfrontend.com/u/your_username" target="_blank">Lamphrangmi Lamin</a>.
-  </div>
+  </div> -->
   <script src="js/index.js"></script>
 </body>
 
