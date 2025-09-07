@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- [Delete this comment] This file is the main file for the challenge. For the most part, you should be editing this file. -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Details Section | GreatFrontEnd Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
+      If you're not using Tailwind, you may delete the <script> -->
+  <!-- Get started on Tailwind: https://tailwindcss.com/docs/installation/play-cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="icon" href="img/favicon.ico" sizes="any" />
+  <style>
+    /* You may write styles inside this <style> tag or within `css/style.css`. */
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-[#F9FAFB] to-[#D2D6DB]">
+  <div class="bg-white py-12 m-4">
+
+    <div class="container">
+      <!-- Main Product image -->
+      <div class="">
+        <img class="h-[400px]"
+          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+          alt="product">
+      </div>
+      <!-- Product gallery -->
+      <div class="">
+        <img class="w-20"
+          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+          alt="">
+        <img class="w-20"
+          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+          alt="">
+        <img class="w-20"
+          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+          alt="">
+        <img class="w-20"
+          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+          alt="">
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="">
+      <div class="">
+        <h1>Voyager Hoodie</h1>
+        <p class=""><span class="discounted-price">$76</span> <span class="original-price">$95</span></p>
+        <p>20% OFF</p>
+        <p>4.1 See all 62 reviews</p>
+      </div>
+
+      <!-- Description -->
+      <div>
+        <p>The Voyager Hoodie is for the explorer at heart. Its durable fabric and roomy pockets are perfect for those
+          who are always searching for the next adventure.</p>
+      </div>
+
+      <!-- Color Options -->
+      <form action="|">
+        <fieldset>
+          <legend>Available Colors</legend>
+          <div class="">
+            <input type="radio" name="color" id="color1" value="color1">
+            <label for="color1">Color1</label>
+            <input type="radio" name="color" id="color2" value="color2">
+            <label for="color2">Color2</label>
+          </div>
+        </fieldset>
+        <!-- Size Options -->
+        <fieldset>
+          <legend>Available Colors</legend>
+          <div class="">
+            <input type="radio" id="size-xs" name="size" value="XS">
+            <label for="size-xs">XS</label>
+            <input type="radio" id="size-s" name="size" value="S">
+            <label for="size-s">S</label>
+            <input type="radio" id="size-m" name="size" value="M">
+            <label for="size-m">M</label>
+            <input type="radio" id="size-l" name="size" value="L">
+            <label for="size-l">L</label>
+
+            <input type="radio" id="size-xs" name="size" value="XS">
+            <label for="size-xl">XL</label>
+          </div>
+        </fieldset>
+        <!-- Quantity -->
+        <label for="quantity">Quantity</label>
+        <div class="">
+          <button type="button">-</button>
+          <input id="quantity" min="1" value="1" max="10" type="number">
+          <button type="button">+</button>
+        </div>
+
+        <!-- Add to cart -->
+        <button type="submit">Add to Cart</button>
+      </form>
+
+      <!-- Features -->
+      <div class="">
+        <div class="">
+          <p>Features</p>
+          <ul>
+            <li>Designed for comfort and durability.</li>
+            <li>Soft, breathable fabric ideal for travel and adventure.</li>
+            <li>Large front pocket and adjustable hood.</li>
+            <li>Minimalist design pairs well with any style.</li>
+            <li>Made with eco-conscious materials.</li>
+          </ul>
+        </div>
+        <!-- Toggle to collaspe button -->
+        <div class="">
+          <button>-</button>
+        </div>
+      </div>
+
+      <!-- Fabric & Care -->
+      <div class="">
+        <div class="">
+          <p>Fabric & Care</p>
+          <ul>
+            <li>Machine wash cold on a gentle cycle.</li>
+            <li>Tumble dry low or hang to dry.</li>
+            <li>Do not use fabric softeners or bleach.</li>
+            <li>Iron on a low setting if necessary.</li>
+          </ul>
+        </div>
+        <!-- Toggle to collaspe button -->
+        <div class="">
+          <button>-</button>
+        </div>
+      </div>
+
+      <!-- Shipping -->
+      <div class="">
+        <div class="">
+          <p>Shipping</p>
+          <ul>
+            <li>Free standard shipping on all orders - no minimum spend required.</li>
+            <li>Expedited shipping available at an additional cost.</li>
+            <li>Packaged in biodegradable materials to reduce environmental impact.</li>
+          </ul>
+        </div>
+        <!-- Toggle to collaspe button -->
+        <div class="">
+          <button>-</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Attribute this challenge to yourself! -->
+  <div class="credits">
+    A challenge by
+    <a href="https://www.greatfrontend.com/projects?ref=challenges" target="_blank">GreatFrontEnd Projects</a>. Built by
+    <a href="https://www.greatfrontend.com/u/your_username" target="_blank">Lamphrangmi Lamin</a>.
+  </div>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
