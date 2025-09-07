@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
+  <!-- Remix icons cdn link -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
@@ -24,39 +26,57 @@
 </head>
 
 <body class="bg-gradient-to-b from-[#F9FAFB] to-[#D2D6DB]">
-  <div class="bg-white py-12 m-4">
+  <div class="bg-white py-12 px-4 m-4 grid grid-cols-4 gap-x-4 gap-y-12 rounded">
 
-    <div class="container">
-      <!-- Main Product image -->
-      <div class="">
-        <img class="h-[400px]"
+    <div class="col-span-4">
+      <!--Product Hero Image -->
+      <div class="mb-6">
+        <img class="h-[400px] rounded-lg w-full object-cover"
           src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
           alt="product">
       </div>
       <!-- Product gallery -->
-      <div class="">
-        <img class="w-20"
-          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
-          alt="">
-        <img class="w-20"
-          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
-          alt="">
-        <img class="w-20"
-          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
-          alt="">
-        <img class="w-20"
-          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
-          alt="">
+      <div class="flex gap-4 overflow-x-auto">
+        <div class="flex-shrink-0">
+          <img class="w-20 object-cover rounded-lg"
+            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+            alt="">
+        </div>
+        <div class="flex-shrink-0">
+          <img class="w-20 object-cover rounded-lg"
+            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+            alt="">
+        </div>
+        <div class="flex-shrink-0">
+          <img class="w-20 object-cover rounded-lg"
+            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+            alt="">
+        </div>
+        <div class="flex-shrink-0">
+          <img class="w-20 object-cover rounded-lg"
+            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+            alt="">
+        </div>
       </div>
     </div>
 
     <!-- Main content -->
-    <div class="">
+    <div class="col-span-4">
       <div class="">
         <h1>Voyager Hoodie</h1>
         <p class=""><span class="discounted-price">$76</span> <span class="original-price">$95</span></p>
         <p>20% OFF</p>
-        <p>4.1 See all 62 reviews</p>
+        <p>
+          4.1
+          <span>
+            <i class="ri-star-fill text-yellow-300"></i>
+            <i class="ri-star-fill text-yellow-300"></i>
+            <i class="ri-star-fill text-yellow-300"></i>
+            <i class="ri-star-fill text-yellow-300"></i>
+            <i class="ri-star-half-fill text-yellow-300"></i>
+          </span>
+          See all 62 reviews
+        </p>
       </div>
 
       <!-- Description -->
