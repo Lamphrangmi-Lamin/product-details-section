@@ -92,17 +92,22 @@
       <form class="mb-10" action="|">
         <fieldset class="mb-8">
           <legend class="text-sm text-neutral-500 mb-4">Available Colors</legend>
-          <div class="">
-            <input type="radio" name="color" id="color1" value="color1">
-            <label for="color1">Color1</label>
-            <input type="radio" name="color" id="color2" value="color2">
-            <label for="color2">Color2</label>
+          <div class="flex gap-8">
+            <label for="color1" class="relative">
+              <input class="peer appearance-none" type="radio" name="color" id="color1" value="color1">
+              <i class="ri-checkbox-circle-fill text-[38px] text-emerald-500 rounded-full bg-emerald-500 peer-checked:bg-white peer-checked:text-emerald-500 peer-checked:ring-indigo-600 peer-checked:ring-1"></i>
+            </label>
+
+            <label for="color2" class="relative">
+              <input class="peer appearance-none" type="radio" name="color" id="color2" value="color1">
+              <i class="ri-checkbox-circle-fill text-[38px] text-yellow-600 rounded-full bg-yellow-600 peer-checked:bg-white peer-checked:text-yellow-600 peer-checked:ring-indigo-600 peer-checked:ring-1"></i>
+            </label>
           </div>
         </fieldset>
 
         <!-- Size Options -->
         <fieldset class="mb-8">
-          <legend class="text-sm text-neutral-500 mb-4">Available Colors</legend>
+          <legend class="text-sm text-neutral-500 mb-4">Available Sizes</legend>
           <div class="">
             <input type="radio" id="size-xs" name="size" value="XS">
             <label for="size-xs">XS</label>
