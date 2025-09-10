@@ -36,29 +36,29 @@
       <!--Product Hero Image -->
       <div class="mb-6">
         <img class="h-[400px] rounded-lg w-full object-cover md:h-[800px]"
-          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
-          alt="product">
+          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-1.jpg"
+          alt="main product image">
       </div>
       <!-- Product gallery -->
       <div class="flex gap-4 overflow-x-auto">
         <div class="flex-shrink-0">
-          <img class="w-20 object-cover rounded-lg md:w-[188px]"
-            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+          <img class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
+            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-1.jpg"
             alt="">
         </div>
         <div class="flex-shrink-0">
-          <img class="w-20 object-cover rounded-lg md:w-[188px]"
-            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+          <img class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
+            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-2.jpg"
             alt="">
         </div>
         <div class="flex-shrink-0">
-          <img class="w-20 object-cover rounded-lg md:w-[188px]"
-            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+          <img class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
+            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-3.jpg"
             alt="">
         </div>
         <div class="flex-shrink-0">
-          <img class="w-20 object-cover rounded-lg md:w-[188px]"
-            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/autumnal-knitwear/autumnal-knitwear-1.jpg"
+          <img class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
+            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-4.jpg"
             alt="">
         </div>
       </div>
@@ -85,7 +85,9 @@
             <i class="ri-star-fill text-yellow-400"></i>
             <i class="ri-star-half-fill text-yellow-400"></i>
           </span>
-          <span class="text-sm text-indigo-700">See all 62 reviews</span>
+          <a aria-disabled="false" class="text-sm font-medium text-indigo-700 cursor-pointer
+          hover:text-indigo-800 active:ring-2 active:rounded active:drop-shadow
+          aria-disabled:text-neutral-400 aria-disabled:cursor-not-allowed">See all 62 reviews</a>
         </p>
       </div>
 
@@ -97,7 +99,7 @@
       </div>
 
       <!-- Color Options -->
-      <form class="mb-10" action="|">
+      <form class="mb-10" action="#">
         <fieldset class="mb-8">
           <legend class="text-sm text-neutral-500 mb-4">Available Colors</legend>
           <div class="flex gap-8">
@@ -161,14 +163,16 @@
         </div>
 
         <!-- Add to cart -->
-        <button class="bg-indigo-700 text-white w-full rounded drop-shadow py-3" type="submit">Add to Cart</button>
+        <button class="bg-indigo-700 hover:bg-indigo-800 focus:ring-2 focus:ring-indigo-200 text-white w-full rounded drop-shadow py-3
+        text-lg font-medium
+        disabled:bg-neutral-100 disabled:text-neutral-400 disabled:drop-shadow-none disabled:cursor-not-allowed" type="submit">Add to Cart</button>
       </form>
 
       <!-- Features -->
       <div class="mb-8 flex justify-between">
         <div class="">
           <p class="text-lg font-medium text-neutral-900 mb-2">Features</p>
-          <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-full">
+          <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
             <li>Designed for comfort and durability.</li>
             <li>Soft, breathable fabric ideal for travel and adventure.</li>
             <li>Large front pocket and adjustable hood.</li>
@@ -186,7 +190,7 @@
       <div class="mb-8 flex justify-between">
         <div class="">
           <p class="text-lg font-medium text-neutral-900 mb-2">Fabric & Care</p>
-          <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-full">
+          <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
             <li>Machine wash cold on a gentle cycle.</li>
             <li>Tumble dry low or hang to dry.</li>
             <li>Do not use fabric softeners or bleach.</li>
@@ -203,7 +207,7 @@
       <div class="flex justify-between">
         <div class="">
           <p class="text-lg font-medium text-neutral-900 mb-2">Shipping</p>
-          <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-full">
+          <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[90%]">
             <li>Free standard shipping on all orders - no minimum spend required.</li>
             <li>Expedited shipping available at an additional cost.</li>
             <li>Packaged in biodegradable materials to reduce environmental impact.</li>
