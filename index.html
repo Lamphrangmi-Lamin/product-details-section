@@ -98,7 +98,7 @@
           who are always searching for the next adventure.</p>
       </div>
 
-      <!-- Color Options -->
+      <!-- Color swatches -->
       <form class="mb-10" action="#">
         <fieldset class="mb-8">
           <legend class="text-sm text-neutral-500 mb-4">Available Colors</legend>
@@ -106,13 +106,25 @@
             <label for="color1" class="relative">
               <input class="peer appearance-none" type="radio" name="color" id="color1" value="color1">
               <i
-                class="ri-checkbox-circle-fill text-[38px] text-emerald-500 rounded-full bg-emerald-500 peer-checked:bg-white peer-checked:text-emerald-500 peer-checked:ring-indigo-600 peer-checked:ring-1"></i>
+                class="ri-checkbox-circle-fill text-[38px] text-emerald-500 rounded-full bg-emerald-500 peer-checked:bg-white peer-checked:text-emerald-500 peer-checked:ring-indigo-600 peer-checked:ring-1
+                peer-hover:ring-2 peer-hover:ring-indigo-200
+                peer-focus:ring-8 peer-focus:ring-indigo-200  peer-focus:bg-emerald-500
+                peer-disabled:ring-0"></i>
+                <span class="peer-disabled:absolute peer-disabled:inset-0 peer-disabled:flex peer-disabled:items-center peer-disabled:justify-center">
+                  <span class="peer-disabled:block w-11 h-0.5 bg-neutral-600 rotate-[135deg]"></span>
+                </span>
             </label>
 
             <label for="color2" class="relative">
-              <input class="peer appearance-none" type="radio" name="color" id="color2" value="color1">
+              <input class="peer appearance-none" type="radio" name="color" id="color2" value="color2">
               <i
-                class="ri-checkbox-circle-fill text-[38px] text-yellow-600 rounded-full bg-yellow-600 peer-checked:bg-white peer-checked:text-yellow-600 peer-checked:ring-indigo-600 peer-checked:ring-1"></i>
+                class="ri-checkbox-circle-fill text-[38px] text-yellow-600 rounded-full bg-yellow-600 peer-checked:bg-white peer-checked:text-yellow-600 peer-checked:ring-indigo-600 peer-checked:ring-1
+                peer-hover:ring-2 peer-hover:ring-indigo-200
+                peer-focus:ring-8 peer-focus:ring-indigo-200  peer-focus:bg-yellow-600
+                peer-disabled:ring-0"></i>
+                <span class="peer-disabled:absolute peer-disabled:inset-0 peer-disabled:flex peer-disabled:items-center peer-disabled:justify-center">
+                  <span class="peer-disabled:block w-11 h-0.5 bg-neutral-600 rotate-[135deg]"></span>
+                </span>
             </label>
           </div>
         </fieldset>
@@ -125,40 +137,45 @@
               <input class="appearance-none peer" type="radio" id="size-xs" name="size" value="XS">
               <label class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600
               hover:bg-neutral-50 hover:text-neutral-950
-              peer-focus:bg-neutral-50 peer-focus:text-neutral-950" for="size-xs">XS</label>
+              peer-focus:bg-neutral-50 peer-focus:text-neutral-950
+              peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0" for="size-xs">XS</label>
             </div>
 
             <div class="flex justify-center items-center">
               <input class="appearance-none peer" type="radio" id="size-s" name="size" value="S">
               <label class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600
               hover:bg-neutral-50 hover:text-neutral-950
-              peer-focus:bg-neutral-50 peer-focus:text-neutral-950" for="size-s">S</label>
+              peer-focus:bg-neutral-50 peer-focus:text-neutral-950
+              peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0" for="size-s">S</label>
             </div>
 
             <div class="flex justify-center items-center">
               <input class="appearance-none peer" type="radio" id="size-m" name="size" value="M">
               <label class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600
               hover:bg-neutral-50 hover:text-neutral-950
-              peer-focus:bg-neutral-50 peer-focus:text-neutral-950" for="size-m">M</label>
+              peer-focus:bg-neutral-50 peer-focus:text-neutral-950
+              peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none  peer-disabled:ring-0" for="size-m">M</label>
             </div>
 
             <div class="flex justify-center items-center">
               <input class="appearance-none peer" type="radio" id="size-l" name="size" value="L">
               <label class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600
               hover:bg-neutral-50 hover:text-neutral-950
-              peer-focus:bg-neutral-50 peer-focus:text-neutral-950" for="size-l">L</label>
+              peer-focus:bg-neutral-50 peer-focus:text-neutral-950
+              peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0" for="size-l">L</label>
             </div>
 
             <div class="flex justify-center items-center">
-              <input class="appearance-none peer" type="radio" id="size-xl" name="size" value="XL">
+              <input aria-selected="true" class="appearance-none peer" type="radio" id="size-xl" name="size" value="XL">
               <label class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600
               hover:bg-neutral-50 hover:text-neutral-950
-              peer-focus:bg-neutral-50 peer-focus:text-neutral-950" for="size-xl">XL</label>
+              peer-focus:bg-neutral-50 peer-focus:text-neutral-950
+              peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0" for="size-xl">XL</label>
             </div>
           </div>
         </fieldset>
 
-        <!-- Quantity -->
+        <!-- Cart Control -->
         <div class="mb-8">
           <div class="mb-4"><label class="text-sm text-neutral-500" for="quantity">Quantity</label></div>
           <div class="bg-neutral-50 ring-neutral-200 ring-1 rounded-md w-[125px] flex gap-3 justify-center items-center p-0.5 text-neutral-600">
