@@ -3,6 +3,9 @@ const productSpiel = document.getElementById("product-spiel");
 const reviewCount = document.getElementById("review-count");
 const ratingVal = document.getElementById("rating-value");
 const starsContainer = document.getElementById("stars-container");
+const productGallery = document.getElementById("product-gallery");
+const productImgMain = document.getElementById("product-img-main");
+// console.log(productImgMain)
 
 async function fetchProductDetails(productId) {
   const baseUrl =
@@ -14,7 +17,6 @@ async function fetchProductDetails(productId) {
   return response.json();
 }
 
-// console.log(fetchData(url));
 async function main() {
   try {
     const data = await fetchProductDetails("elemental-sneakers");
@@ -25,6 +27,7 @@ async function main() {
     reviewCount.innerText = data.reviews;
     ratingVal.innerText = Number(data.rating).toFixed(1);
     starsContainer.innerHTML = renderStars(data.rating);
+    productGallery.innerHTML = renderProductImgsList(data.images);
   } catch (error) {
     console.log(error);
   }
@@ -56,4 +59,13 @@ function renderStars(rating) {
   }
 
   return starsHTML;
+}
+
+// Rendering functions
+function renderProductImgsList(dataImages) {
+  return dataImages.map((imageData) => `
+  <div class="flex-shrink-0">
+    <img class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]" src="${imageData.image_url}" alt="product image">
+  </div>`)
+  .join("");
 }
