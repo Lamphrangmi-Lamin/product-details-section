@@ -1,255 +1,376 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<!-- [Delete this comment] This file is the main file for the challenge. For the most part, you should be editing this file. -->
+  <!-- [Delete this comment] This file is the main file for the challenge. For the most part, you should be editing this file. -->
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Details Section | GreatFrontEnd Projects</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <!-- Remix icons cdn link -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Details Section | GreatFrontEnd Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Remix icons cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
+    <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
       If you're not using Tailwind, you may delete the <script> -->
-  <!-- Get started on Tailwind: https://tailwindcss.com/docs/installation/play-cdn -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Get started on Tailwind: https://tailwindcss.com/docs/installation/play-cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="icon" href="img/favicon.ico" sizes="any" />
-  <style>
-    /* You may write styles inside this <style> tag or within `css/style.css`. */
-  </style>
-</head>
+    <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <style>
+      /* You may write styles inside this <style> tag or within `css/style.css`. */
+    </style>
+  </head>
 
-<body class="bg-gradient-to-b from-[#F9FAFB] to-[#D2D6DB]">
-  <div class="bg-white drop-shadow py-12 md:py-16 xl:p-24 px-4 m-4 grid grid-cols-4 gap-x-4 gap-y-12 rounded
-  md:grid-cols-6
-  md:gap-x-8
-  xl:grid-cols-12
-  xl:gap-x-8">
-
-    <div class="col-span-4 md:col-span-6 xl:col-span-6">
-      <!--Product Hero Image -->
-      <div class="mb-6">
-        <img id="product-img-main" class="h-[400px] rounded-lg w-full object-cover md:h-[800px]"
-          src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-1.jpg"
-          alt="main product image">
-      </div>
-      <!-- Product gallery -->
-      <div id="product-gallery" class="flex gap-4 overflow-x-auto">
-        <div class="flex-shrink-0">
-          <img class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
+  <body class="bg-gradient-to-b from-[#F9FAFB] to-[#D2D6DB]">
+    <div
+      class="bg-white drop-shadow py-12 md:py-16 xl:p-24 px-4 m-4 grid grid-cols-4 gap-x-4 gap-y-12 rounded md:grid-cols-6 md:gap-x-8 xl:grid-cols-12 xl:gap-x-8"
+    >
+      <div class="col-span-4 md:col-span-6 xl:col-span-6">
+        <!--Product Hero Image -->
+        <div class="mb-6">
+          <img
+            id="product-img-main"
+            
+            class="h-[400px] rounded-lg w-full object-cover md:h-[800px]"
             src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-1.jpg"
-            alt="">
+            alt="main product image"
+          />
         </div>
-        <div class="flex-shrink-0">
-          <img class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
-            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-2.jpg"
-            alt="">
-        </div>
-        <div class="flex-shrink-0">
-          <img class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
-            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-3.jpg"
-            alt="">
-        </div>
-        <div class="flex-shrink-0">
-          <img class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
-            src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-4.jpg"
-            alt="">
+        <!-- Product gallery -->
+        <div id="product-gallery" class="flex gap-4 overflow-x-auto">
+          <div class="flex-shrink-0">
+            <img
+              tabindex="0"
+              class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
+              src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="flex-shrink-0">
+            <img
+              class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
+              src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-2.jpg"
+              alt=""
+            />
+          </div>
+          <div class="flex-shrink-0">
+            <img
+              class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
+              src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-3.jpg"
+              alt=""
+            />
+          </div>
+          <div class="flex-shrink-0">
+            <img
+              class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
+              src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-4.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Main content -->
-    <div class="col-span-4 md:col-span-6 xl:col-span-6">
-      <div class="mb-8">
-        <h1 id="product-name" class="text-3xl font-semibold mb-5 text-neutral-900">Voyager Hoodie</h1>
-        <p class="mb-2">
-          <span class="text-3xl font-medium text-neutral-600">$76</span>
-          <span class="text-lg font-medium text-neutral-400 line-through">$95</span>
-        </p>
-        <p class="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-full w-20 text-center py-1 mb-3">
-          20% OFF</p>
+      <!-- Main content -->
+      <div class="col-span-4 md:col-span-6 xl:col-span-6">
+        <div class="mb-8">
+          <h1
+            id="product-name"
+            class="text-3xl font-semibold mb-5 text-neutral-900"
+          >
+            Voyager Hoodie
+          </h1>
+          <p class="mb-2">
+            <span class="text-3xl font-medium text-neutral-600">$76</span>
+            <span class="text-lg font-medium text-neutral-400 line-through"
+              >$95</span
+            >
+          </p>
+          <p
+            class="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-full w-20 text-center py-1 mb-3"
+          >
+            20% OFF
+          </p>
 
           <!-- Ratings & reviews -->
-        <div class="flex items-center">
-          <div id="rating-value" class="text-xl text-neutral-900"></div>
-          <div id="stars-container" class="mx-2 text-[20px]"></div>
-          <a aria-disabled="false" class="text-sm font-medium text-indigo-700 cursor-pointer
-          hover:text-indigo-800 active:ring-2 active:rounded active:drop-shadow
-          aria-disabled:text-neutral-400 aria-disabled:cursor-not-allowed">See all <span id="review-count"></span> reviews</a>
+          <div class="flex items-center">
+            <div id="rating-value" class="text-xl text-neutral-900"></div>
+            <div id="stars-container" class="mx-2 text-[20px]"></div>
+            <a
+              aria-disabled="false"
+              class="text-sm font-medium text-indigo-700 cursor-pointer hover:text-indigo-800 active:ring-2 active:rounded active:drop-shadow aria-disabled:text-neutral-400 aria-disabled:cursor-not-allowed"
+              >See all <span id="review-count"></span> reviews</a
+            >
+          </div>
         </div>
-      </div>
 
-      <!-- Description -->
-      <div class="mb-8">
-        <p id="product-spiel" class="text-neutral-600">The Voyager Hoodie is for the explorer at heart. Its durable fabric and roomy
-          pockets are perfect for those
-          who are always searching for the next adventure.</p>
-      </div>
-
-      <!-- Color swatches -->
-      <form class="mb-10" action="#">
-        <fieldset class="mb-8">
-          <legend class="text-sm text-neutral-500 mb-4">Available Colors</legend>
-          <div class="flex gap-8">
-            <label for="color1" class="relative">
-              <input class="peer appearance-none" type="radio" name="color" id="color1" value="color1">
-              <i
-                class="ri-checkbox-circle-fill text-[38px] text-emerald-500 rounded-full bg-emerald-500 peer-checked:bg-white peer-checked:text-emerald-500 peer-checked:ring-indigo-600 peer-checked:ring-1
-                peer-hover:ring-2 peer-hover:ring-indigo-200
-                peer-focus:ring-8 peer-focus:ring-indigo-200  peer-focus:bg-emerald-500
-                peer-disabled:ring-0"></i>
-                <span class="peer-disabled:absolute peer-disabled:inset-0 peer-disabled:flex peer-disabled:items-center peer-disabled:justify-center">
-                  <span class="peer-disabled:block w-11 h-0.5 bg-neutral-600 rotate-[135deg]"></span>
-                </span>
-            </label>
-
-            <label for="color2" class="relative">
-              <input class="peer appearance-none" type="radio" name="color" id="color2" value="color2">
-              <i
-                class="ri-checkbox-circle-fill text-[38px] text-yellow-600 rounded-full bg-yellow-600 peer-checked:bg-white peer-checked:text-yellow-600 peer-checked:ring-indigo-600 peer-checked:ring-1
-                peer-hover:ring-2 peer-hover:ring-indigo-200
-                peer-focus:ring-8 peer-focus:ring-indigo-200  peer-focus:bg-yellow-600
-                peer-disabled:ring-0"></i>
-                <span class="peer-disabled:absolute peer-disabled:inset-0 peer-disabled:flex peer-disabled:items-center peer-disabled:justify-center">
-                  <span class="peer-disabled:block w-11 h-0.5 bg-neutral-600 rotate-[135deg]"></span>
-                </span>
-            </label>
-          </div>
-        </fieldset>
-
-        <!-- Size Options -->
-        <fieldset class="mb-8">
-          <legend class="text-sm text-neutral-500 mb-4">Available Sizes</legend>
-          <div class="text-neutral-900 font-medium flex gap-4 flex-wrap items-center">
-            <div class="flex justify-center items-center">
-              <input class="appearance-none peer" type="radio" id="size-xs" name="size" value="XS">
-              <label class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600
-              hover:bg-neutral-50 hover:text-neutral-950
-              peer-focus:bg-neutral-50 peer-focus:text-neutral-950
-              peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0" for="size-xs">XS</label>
-            </div>
-
-            <div class="flex justify-center items-center">
-              <input class="appearance-none peer" type="radio" id="size-s" name="size" value="S">
-              <label class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600
-              hover:bg-neutral-50 hover:text-neutral-950
-              peer-focus:bg-neutral-50 peer-focus:text-neutral-950
-              peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0" for="size-s">S</label>
-            </div>
-
-            <div class="flex justify-center items-center">
-              <input class="appearance-none peer" type="radio" id="size-m" name="size" value="M">
-              <label class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600
-              hover:bg-neutral-50 hover:text-neutral-950
-              peer-focus:bg-neutral-50 peer-focus:text-neutral-950
-              peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none  peer-disabled:ring-0" for="size-m">M</label>
-            </div>
-
-            <div class="flex justify-center items-center">
-              <input class="appearance-none peer" type="radio" id="size-l" name="size" value="L">
-              <label class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600
-              hover:bg-neutral-50 hover:text-neutral-950
-              peer-focus:bg-neutral-50 peer-focus:text-neutral-950
-              peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0" for="size-l">L</label>
-            </div>
-
-            <div class="flex justify-center items-center">
-              <input aria-selected="true" class="appearance-none peer" type="radio" id="size-xl" name="size" value="XL">
-              <label class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600
-              hover:bg-neutral-50 hover:text-neutral-950
-              peer-focus:bg-neutral-50 peer-focus:text-neutral-950
-              peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0" for="size-xl">XL</label>
-            </div>
-          </div>
-        </fieldset>
-
-        <!-- Cart Control -->
+        <!-- Description -->
         <div class="mb-8">
-          <div class="mb-4"><label class="text-sm text-neutral-500" for="quantity">Quantity</label></div>
-          <div class="bg-neutral-50 ring-neutral-200 ring-1 rounded-md w-[125px] flex gap-3 justify-center items-center p-0.5 text-neutral-600">
-            <button class="disabled:text-neutral-400 disabled:cursor-not-allowed" type="button">
-              <i class="ri-subtract-fill text-xl"></i>
-            </button>
-            <input class="bg-neutral-50 text-sm font-medium [appearance:textfield] text-center w-[40px] py-1.5" id="quantity" min="1" value="1" max="10" type="number">
-            <button class="disabled:text-neutral-400 disabled:cursor-not-allowed" type="button">
-              <i class="ri-add-fill text-xl"></i>
-            </button>
+          <p id="product-spiel" class="text-neutral-600">
+            The Voyager Hoodie is for the explorer at heart. Its durable fabric
+            and roomy pockets are perfect for those who are always searching for
+            the next adventure.
+          </p>
+        </div>
+
+        <!-- Color swatches -->
+        <form class="mb-10" action="#">
+          <fieldset class="mb-8">
+            <legend class="text-sm text-neutral-500 mb-4">
+              Available Colors
+            </legend>
+            <div class="flex gap-8">
+              <label for="color1" class="relative">
+                <input
+                  class="peer appearance-none"
+                  type="radio"
+                  name="color"
+                  id="color1"
+                  value="color1"
+                />
+                <i
+                  class="ri-checkbox-circle-fill text-[38px] text-emerald-500 rounded-full bg-emerald-500 peer-checked:bg-white peer-checked:text-emerald-500 peer-checked:ring-indigo-600 peer-checked:ring-1 peer-hover:ring-2 peer-hover:ring-indigo-200 peer-focus:ring-8 peer-focus:ring-indigo-200 peer-focus:bg-emerald-500 peer-disabled:ring-0"
+                ></i>
+                <span
+                  class="peer-disabled:absolute peer-disabled:inset-0 peer-disabled:flex peer-disabled:items-center peer-disabled:justify-center"
+                >
+                  <span
+                    class="peer-disabled:block w-11 h-0.5 bg-neutral-600 rotate-[135deg]"
+                  ></span>
+                </span>
+              </label>
+
+              <label for="color2" class="relative">
+                <input
+                  class="peer appearance-none"
+                  type="radio"
+                  name="color"
+                  id="color2"
+                  value="color2"
+                />
+                <i
+                  class="ri-checkbox-circle-fill text-[38px] text-yellow-600 rounded-full bg-yellow-600 peer-checked:bg-white peer-checked:text-yellow-600 peer-checked:ring-indigo-600 peer-checked:ring-1 peer-hover:ring-2 peer-hover:ring-indigo-200 peer-focus:ring-8 peer-focus:ring-indigo-200 peer-focus:bg-yellow-600 peer-disabled:ring-0"
+                ></i>
+                <span
+                  class="peer-disabled:absolute peer-disabled:inset-0 peer-disabled:flex peer-disabled:items-center peer-disabled:justify-center"
+                >
+                  <span
+                    class="peer-disabled:block w-11 h-0.5 bg-neutral-600 rotate-[135deg]"
+                  ></span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Size Options -->
+          <fieldset class="mb-8">
+            <legend class="text-sm text-neutral-500 mb-4">
+              Available Sizes
+            </legend>
+            <div
+              class="text-neutral-900 font-medium flex gap-4 flex-wrap items-center"
+            >
+              <div class="flex justify-center items-center">
+                <input
+                  class="appearance-none peer"
+                  type="radio"
+                  id="size-xs"
+                  name="size"
+                  value="XS"
+                />
+                <label
+                  class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600 hover:bg-neutral-50 hover:text-neutral-950 peer-focus:bg-neutral-50 peer-focus:text-neutral-950 peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0"
+                  for="size-xs"
+                  >XS</label
+                >
+              </div>
+
+              <div class="flex justify-center items-center">
+                <input
+                  class="appearance-none peer"
+                  type="radio"
+                  id="size-s"
+                  name="size"
+                  value="S"
+                />
+                <label
+                  class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600 hover:bg-neutral-50 hover:text-neutral-950 peer-focus:bg-neutral-50 peer-focus:text-neutral-950 peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0"
+                  for="size-s"
+                  >S</label
+                >
+              </div>
+
+              <div class="flex justify-center items-center">
+                <input
+                  class="appearance-none peer"
+                  type="radio"
+                  id="size-m"
+                  name="size"
+                  value="M"
+                />
+                <label
+                  class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600 hover:bg-neutral-50 hover:text-neutral-950 peer-focus:bg-neutral-50 peer-focus:text-neutral-950 peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0"
+                  for="size-m"
+                  >M</label
+                >
+              </div>
+
+              <div class="flex justify-center items-center">
+                <input
+                  class="appearance-none peer"
+                  type="radio"
+                  id="size-l"
+                  name="size"
+                  value="L"
+                />
+                <label
+                  class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600 hover:bg-neutral-50 hover:text-neutral-950 peer-focus:bg-neutral-50 peer-focus:text-neutral-950 peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0"
+                  for="size-l"
+                  >L</label
+                >
+              </div>
+
+              <div class="flex justify-center items-center">
+                <input
+                  aria-selected="true"
+                  class="appearance-none peer"
+                  type="radio"
+                  id="size-xl"
+                  name="size"
+                  value="XL"
+                />
+                <label
+                  class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600 hover:bg-neutral-50 hover:text-neutral-950 peer-focus:bg-neutral-50 peer-focus:text-neutral-950 peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0"
+                  for="size-xl"
+                  >XL</label
+                >
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Cart Control -->
+          <div class="mb-8">
+            <div class="mb-4">
+              <label class="text-sm text-neutral-500" for="quantity"
+                >Quantity</label
+              >
+            </div>
+            <div
+              class="bg-neutral-50 ring-neutral-200 ring-1 rounded-md w-[125px] flex gap-3 justify-center items-center p-0.5 text-neutral-600"
+            >
+              <button
+                class="disabled:text-neutral-400 disabled:cursor-not-allowed"
+                type="button"
+              >
+                <i class="ri-subtract-fill text-xl"></i>
+              </button>
+              <input
+                class="bg-neutral-50 text-sm font-medium [appearance:textfield] text-center w-[40px] py-1.5"
+                id="quantity"
+                min="1"
+                value="1"
+                max="10"
+                type="number"
+              />
+              <button
+                class="disabled:text-neutral-400 disabled:cursor-not-allowed"
+                type="button"
+              >
+                <i class="ri-add-fill text-xl"></i>
+              </button>
+            </div>
           </div>
+
+          <!-- Add to cart -->
+          <button
+            class="bg-indigo-700 hover:bg-indigo-800 focus:ring-2 focus:ring-indigo-200 text-white w-full rounded drop-shadow py-3 text-lg font-medium disabled:bg-neutral-100 disabled:text-neutral-400 disabled:drop-shadow-none disabled:cursor-not-allowed"
+            type="submit"
+          >
+            Add to Cart
+          </button>
+        </form>
+
+        <!-- Features -->
+        <div class="mb-8 flex justify-between">
+          <div class="">
+            <p class="text-lg font-medium text-neutral-900 mb-2">Features</p>
+            <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
+              <li>Designed for comfort and durability.</li>
+              <li>Soft, breathable fabric ideal for travel and adventure.</li>
+              <li>Large front pocket and adjustable hood.</li>
+              <li>Minimalist design pairs well with any style.</li>
+              <li>Made with eco-conscious materials.</li>
+            </ul>
+          </div>
+          <!-- Toggle to collaspe button -->
+          <button class="text-xl text-neutral-400 flex">
+            <i class="ri-indeterminate-circle-line"></i>
+          </button>
         </div>
 
-        <!-- Add to cart -->
-        <button class="bg-indigo-700 hover:bg-indigo-800 focus:ring-2 focus:ring-indigo-200 text-white w-full rounded drop-shadow py-3
-        text-lg font-medium
-        disabled:bg-neutral-100 disabled:text-neutral-400 disabled:drop-shadow-none disabled:cursor-not-allowed" type="submit">Add to Cart</button>
-      </form>
-
-      <!-- Features -->
-      <div class="mb-8 flex justify-between">
-        <div class="">
-          <p class="text-lg font-medium text-neutral-900 mb-2">Features</p>
-          <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
-            <li>Designed for comfort and durability.</li>
-            <li>Soft, breathable fabric ideal for travel and adventure.</li>
-            <li>Large front pocket and adjustable hood.</li>
-            <li>Minimalist design pairs well with any style.</li>
-            <li>Made with eco-conscious materials.</li>
-          </ul>
+        <!-- Fabric & Care -->
+        <div class="mb-8 flex justify-between">
+          <div class="">
+            <p class="text-lg font-medium text-neutral-900 mb-2">
+              Fabric & Care
+            </p>
+            <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
+              <li>Machine wash cold on a gentle cycle.</li>
+              <li>Tumble dry low or hang to dry.</li>
+              <li>Do not use fabric softeners or bleach.</li>
+              <li>Iron on a low setting if necessary.</li>
+            </ul>
+          </div>
+          <!-- Toggle to collaspe button -->
+          <button class="text-xl text-neutral-400 flex">
+            <i class="ri-indeterminate-circle-line"></i>
+          </button>
         </div>
-        <!-- Toggle to collaspe button -->
-        <button class="text-xl text-neutral-400 flex">
-          <i class="ri-indeterminate-circle-line"></i>
-        </button>
+
+        <!-- Shipping -->
+        <div class="flex justify-between">
+          <div class="">
+            <p class="text-lg font-medium text-neutral-900 mb-2">Shipping</p>
+            <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[90%]">
+              <li>
+                Free standard shipping on all orders - no minimum spend
+                required.
+              </li>
+              <li>Expedited shipping available at an additional cost.</li>
+              <li>
+                Packaged in biodegradable materials to reduce environmental
+                impact.
+              </li>
+            </ul>
+          </div>
+          <!-- Toggle to collaspe button -->
+          <button class="text-xl text-neutral-400 flex">
+            <i class="ri-indeterminate-circle-line"></i>
+          </button>
+        </div>
       </div>
-
-      <!-- Fabric & Care -->
-      <div class="mb-8 flex justify-between">
-        <div class="">
-          <p class="text-lg font-medium text-neutral-900 mb-2">Fabric & Care</p>
-          <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
-            <li>Machine wash cold on a gentle cycle.</li>
-            <li>Tumble dry low or hang to dry.</li>
-            <li>Do not use fabric softeners or bleach.</li>
-            <li>Iron on a low setting if necessary.</li>
-          </ul>
-        </div>
-        <!-- Toggle to collaspe button -->
-        <button class="text-xl text-neutral-400 flex">
-          <i class="ri-indeterminate-circle-line"></i>
-        </button>
-      </div>
-
-      <!-- Shipping -->
-      <div class="flex justify-between">
-        <div class="">
-          <p class="text-lg font-medium text-neutral-900 mb-2">Shipping</p>
-          <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[90%]">
-            <li>Free standard shipping on all orders - no minimum spend required.</li>
-            <li>Expedited shipping available at an additional cost.</li>
-            <li>Packaged in biodegradable materials to reduce environmental impact.</li>
-          </ul>
-        </div>
-        <!-- Toggle to collaspe button -->
-        <button class="text-xl text-neutral-400 flex">
-          <i class="ri-indeterminate-circle-line"></i>
-        </button>
-      </div>
-
     </div>
-  </div>
 
-  <!-- Attribute this challenge to yourself! -->
-  <div class="credits">
-    A challenge by
-    <a href="https://www.greatfrontend.com/projects?ref=challenges" target="_blank">GreatFrontEnd Projects</a>. Built by
-    <a href="https://www.greatfrontend.com/u/your_username" target="_blank">Lamphrangmi Lamin</a>.
-  </div>
-  <script src="js/index.js"></script>
-</body>
-
+    <!-- Attribute this challenge to yourself! -->
+    <div class="credits">
+      A challenge by
+      <a
+        href="https://www.greatfrontend.com/projects?ref=challenges"
+        target="_blank"
+        >GreatFrontEnd Projects</a
+      >. Built by
+      <a href="https://www.greatfrontend.com/u/your_username" target="_blank"
+        >Lamphrangmi Lamin</a
+      >.
+    </div>
+    <script src="js/index.js"></script>
+  </body>
 </html>

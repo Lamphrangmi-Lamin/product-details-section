@@ -28,6 +28,7 @@ async function main() {
     ratingVal.innerText = Number(data.rating).toFixed(1);
     starsContainer.innerHTML = renderStars(data.rating);
     productGallery.innerHTML = renderProductImgsList(data.images);
+    productImgMain.src = data.images[0].image_url;
   } catch (error) {
     console.log(error);
   }
@@ -57,7 +58,7 @@ function renderStars(rating) {
   for (let i = 0; i < emptyStars; i++) {
     starsHTML += `<i class="ri-star-fill text-gray-200"></i>`;
   }
-
+  
   return starsHTML;
 }
 
@@ -65,7 +66,7 @@ function renderStars(rating) {
 function renderProductImgsList(dataImages) {
   return dataImages.map((imageData) => `
   <div class="flex-shrink-0">
-    <img class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]" src="${imageData.image_url}" alt="product image">
+    <img tabindex="0" data-img-url="${imageData.image_url}" class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px] focus:border-indigo-600 focus:border-[3px]" src="${imageData.image_url}" alt="product image">
   </div>`)
   .join("");
 }
