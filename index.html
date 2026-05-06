@@ -67,7 +67,7 @@
     <!-- Main content -->
     <div class="col-span-4 md:col-span-6 xl:col-span-6">
       <div class="mb-8">
-        <h1 class="text-3xl font-semibold mb-5 text-neutral-900">Voyager Hoodie</h1>
+        <h1 id="product-name" class="text-3xl font-semibold mb-5 text-neutral-900">Voyager Hoodie</h1>
         <p class="mb-2">
           <span class="text-3xl font-medium text-neutral-600">$76</span>
           <span class="text-lg font-medium text-neutral-400 line-through">$95</span>
@@ -76,24 +76,18 @@
           20% OFF</p>
 
           <!-- Ratings & reviews -->
-        <p>
-          <span class="text-xl text-neutral-900">4.1</span>
-          <span class="mx-2 text-[20px]">
-            <i class="ri-star-fill text-yellow-400 bg-clip-border"></i>
-            <i class="ri-star-fill text-yellow-400"></i>
-            <i class="ri-star-fill text-yellow-400"></i>
-            <i class="ri-star-fill text-yellow-400"></i>
-            <i class="ri-star-half-fill text-yellow-400"></i>
-          </span>
+        <div class="flex items-center">
+          <div id="rating-value" class="text-xl text-neutral-900"></div>
+          <div id="stars-container" class="mx-2 text-[20px]"></div>
           <a aria-disabled="false" class="text-sm font-medium text-indigo-700 cursor-pointer
           hover:text-indigo-800 active:ring-2 active:rounded active:drop-shadow
-          aria-disabled:text-neutral-400 aria-disabled:cursor-not-allowed">See all 62 reviews</a>
-        </p>
+          aria-disabled:text-neutral-400 aria-disabled:cursor-not-allowed">See all <span id="review-count"></span> reviews</a>
+        </div>
       </div>
 
       <!-- Description -->
       <div class="mb-8">
-        <p class="text-neutral-600">The Voyager Hoodie is for the explorer at heart. Its durable fabric and roomy
+        <p id="product-spiel" class="text-neutral-600">The Voyager Hoodie is for the explorer at heart. Its durable fabric and roomy
           pockets are perfect for those
           who are always searching for the next adventure.</p>
       </div>
