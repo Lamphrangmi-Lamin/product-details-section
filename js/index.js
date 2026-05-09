@@ -5,7 +5,9 @@ const ratingVal = document.getElementById("rating-value");
 const starsContainer = document.getElementById("stars-container");
 const productGallery = document.getElementById("product-gallery");
 const productImgMain = document.getElementById("product-img-main");
-// console.log(productImgMain)
+const colorSwatches = document.getElementById("color-swatches");
+const colorOption = document.getElementById("color-option");
+// console.log(colorSwatches)
 
 async function fetchProductDetails(productId) {
   const baseUrl =
@@ -19,7 +21,7 @@ async function fetchProductDetails(productId) {
 
 async function main() {
   try {
-    const data = await fetchProductDetails("elemental-sneakers");
+    const data = await fetchProductDetails("voyager-hoodie");
     console.log(data);
 
     productName.innerText = data.name;
@@ -29,6 +31,8 @@ async function main() {
     starsContainer.innerHTML = renderStars(data.rating);
     productGallery.innerHTML = renderProductImgsList(data.images);
     productImgMain.src = data.images[0].image_url;
+
+    colorSwatches.innerHTML = renderColorSwatches(data.colors);
   } catch (error) {
     console.log(error);
   }
@@ -58,15 +62,57 @@ function renderStars(rating) {
   for (let i = 0; i < emptyStars; i++) {
     starsHTML += `<i class="ri-star-fill text-gray-200"></i>`;
   }
-  
+
   return starsHTML;
 }
 
 // Rendering functions
 function renderProductImgsList(dataImages) {
-  return dataImages.map((imageData) => `
+  return dataImages
+    .map(
+      (imageData, index) => `
   <div class="flex-shrink-0">
-    <img tabindex="0" data-img-url="${imageData.image_url}" class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px] focus:border-indigo-600 focus:border-[3px]" src="${imageData.image_url}" alt="product image">
-  </div>`)
-  .join("");
+    <img tabindex="0" data-index="${index}" data-img-url="${imageData.image_url}" class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px] focus:border-indigo-600 focus:border-[3px]" src="${imageData.image_url}" alt="product image">
+  </div>`,
+    )
+    .join("");
 }
+
+function renderColorSwatches(colorOptions) {
+  return colorOptions
+    .map(
+      (color, index) => `
+    <label for="${color}" class="relative">
+        <input
+        ${index === 0 ? "checked" : ""}
+        class="peer sr-only"
+        type="radio"
+        name="color"
+        id="${color}"
+        value="${color}"
+        data-color-index="${index}"
+        />
+        <i
+        class="ri-check-fill text-[38px] text-[${color}] bg-[${color}] rounded-full p-[2.33px] hover:outline hover:outline-indigo-200 hover:outline-[2.33px]
+        peer-active:outline peer-active:outline-indigo-50 peer-active:outline-[9px] peer-checked:text-white peer-checked:outline-1 peer-checked:outline-indigo-600 peer-checked:outline-none"
+        ></i>
+        
+        <div
+        class="peer-disabled:absolute peer-disabled:inset-0 peer-disabled:flex peer-disabled:items-center peer-disabled:justify-center"
+        >
+        <span
+        class="peer-disabled:block w-11 h-0.5 bg-neutral-600 rotate-[135deg]"
+        ></span>
+        </div>
+    </label>
+    `,
+    )
+    .join("");
+}
+
+// Event listeners
+productGallery.addEventListener("click", (e) => {
+  if (e.target.matches("img")) {
+    productImgMain.src = e.target.src;
+  }
+});
