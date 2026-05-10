@@ -7,7 +7,7 @@ const productGallery = document.getElementById("product-gallery");
 const productImgMain = document.getElementById("product-img-main");
 const colorSwatches = document.getElementById("color-swatches");
 const colorOption = document.getElementById("color-option");
-const accordionHeaders = document.querySelectorAll('[aria-controls]');
+const accordionContainer = document.getElementById("accordion-container");
 // console.log(colorSwatches)
 
 async function fetchProductDetails(productId) {
@@ -34,6 +34,12 @@ async function main() {
     productImgMain.src = data.images[0].image_url;
 
     colorSwatches.innerHTML = renderColorSwatches(data.colors);
+
+    accordionContainer.innerHTML = renderInfo(data.info);
+    const accordionHeaders = accordionContainer.querySelectorAll("[aria-controls]");
+    accordionHeaders.forEach((header) =>
+      header.addEventListener("click", () => toggleAccordion(header)),
+    );
   } catch (error) {
     console.log(error);
   }
@@ -111,17 +117,51 @@ function renderColorSwatches(colorOptions) {
     .join("");
 }
 
+function renderInfo(infoData) {
+  return infoData
+    .map(
+      (info, index, arr) => `
+      <div class="mb-8">
+        <button
+        id="header${index}"
+        type="button"
+        aria-expanded="false"
+        aria-controls="panel${index}"
+        class="flex justify-between w-full mb-2"
+        >
+        <span class="text-lg font-medium text-neutral-900">${info.title}</span>
+        <i
+        class="ri-add-circle-line text-xl text-neutral-400"
+        ></i>
+        </button>
+        <div id="panel${index}" class="hidden" aria-labelledby="header${index}" role="region">
+        ${info.description
+          .map(
+            (item) => `
+            <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
+            <li>${item}</li>
+        </ul>
+        `,
+          )
+          .join("")}
+        </div>
+        ${index !== arr.length - 1 ? '<hr class="mt-8" />' : ""}
+        </div>`,
+    )
+    .join("");
+}
+
 // Helper functions
 function toggleAccordion(header) {
-    const panelId = header.getAttribute('aria-controls');
-    const activePanel = document.getElementById(panelId);
-    const activeIcon = header.querySelector('i');
-    const isExpanded = header.getAttribute('aria-expanded') === "true";
-    
-    header.setAttribute('aria-expanded', !isExpanded);
-    activePanel.classList.toggle("hidden");
-    activeIcon.classList.toggle("ri-indeterminate-circle-line");
-    activeIcon.classList.toggle("ri-add-circle-line");
+  const panelId = header.getAttribute("aria-controls");
+  const activePanel = document.getElementById(panelId);
+  const activeIcon = header.querySelector("i");
+  const isExpanded = header.getAttribute("aria-expanded") === "true";
+
+  header.setAttribute("aria-expanded", !isExpanded);
+  activePanel.classList.toggle("hidden");
+  activeIcon.classList.toggle("ri-indeterminate-circle-line");
+  activeIcon.classList.toggle("ri-add-circle-line");
 }
 
 // Event listeners
@@ -130,5 +170,3 @@ productGallery.addEventListener("click", (e) => {
     productImgMain.src = e.target.src;
   }
 });
-
-accordionHeaders.forEach(header => header.addEventListener('click', () => toggleAccordion(header)));
