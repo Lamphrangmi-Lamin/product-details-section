@@ -7,6 +7,7 @@ const productGallery = document.getElementById("product-gallery");
 const productImgMain = document.getElementById("product-img-main");
 const colorSwatches = document.getElementById("color-swatches");
 const colorOption = document.getElementById("color-option");
+const accordionHeaders = document.querySelectorAll('[aria-controls]');
 // console.log(colorSwatches)
 
 async function fetchProductDetails(productId) {
@@ -22,7 +23,7 @@ async function fetchProductDetails(productId) {
 async function main() {
   try {
     const data = await fetchProductDetails("voyager-hoodie");
-    console.log(data);
+    // console.log(data);
 
     productName.innerText = data.name;
     productSpiel.innerText = data.description;
@@ -40,7 +41,7 @@ async function main() {
 
 main();
 
-// Helper functions
+// Rendering functions
 function renderStars(rating) {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 >= 0.5;
@@ -72,7 +73,7 @@ function renderProductImgsList(dataImages) {
     .map(
       (imageData, index) => `
   <div class="flex-shrink-0">
-    <img tabindex="0" data-index="${index}" data-img-url="${imageData.image_url}" class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px] focus:border-indigo-600 focus:border-[3px]" src="${imageData.image_url}" alt="product image">
+    <img tabindex="0" data-index="${index}" class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px] focus:border-indigo-600 focus:border-[3px]" src="${imageData.image_url}" alt="product image">
   </div>`,
     )
     .join("");
@@ -110,9 +111,24 @@ function renderColorSwatches(colorOptions) {
     .join("");
 }
 
+// Helper functions
+function toggleAccordion(header) {
+    const panelId = header.getAttribute('aria-controls');
+    const activePanel = document.getElementById(panelId);
+    const activeIcon = header.querySelector('i');
+    const isExpanded = header.getAttribute('aria-expanded') === "true";
+    
+    header.setAttribute('aria-expanded', !isExpanded);
+    activePanel.classList.toggle("hidden");
+    activeIcon.classList.toggle("ri-indeterminate-circle-line");
+    activeIcon.classList.toggle("ri-add-circle-line");
+}
+
 // Event listeners
 productGallery.addEventListener("click", (e) => {
   if (e.target.matches("img")) {
     productImgMain.src = e.target.src;
   }
 });
+
+accordionHeaders.forEach(header => header.addEventListener('click', () => toggleAccordion(header)));

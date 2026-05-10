@@ -45,37 +45,7 @@
           />
         </div>
         <!-- Product gallery -->
-        <div id="product-gallery" class="flex gap-4 overflow-x-auto">
-          <div class="flex-shrink-0">
-            <img
-              tabindex="0"
-              class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
-              src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-1.jpg"
-              alt=""
-            />
-          </div>
-          <div class="flex-shrink-0">
-            <img
-              class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
-              src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-2.jpg"
-              alt=""
-            />
-          </div>
-          <div class="flex-shrink-0">
-            <img
-              class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
-              src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-3.jpg"
-              alt=""
-            />
-          </div>
-          <div class="flex-shrink-0">
-            <img
-              class="w-20 object-cover rounded-lg md:w-[188px] xl:w-40 md:h-[190px]"
-              src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-4.jpg"
-              alt=""
-            />
-          </div>
-        </div>
+        <div id="product-gallery" class="flex gap-4 overflow-x-auto"></div>
       </div>
 
       <!-- Main content -->
@@ -277,10 +247,21 @@
           </button>
         </form>
 
-        <!-- Features -->
-        <div class="mb-8 flex justify-between">
-          <div class="">
-            <p class="text-lg font-medium text-neutral-900 mb-2">Features</p>
+        <!-- Accordion -->
+        <div class="mb-8">
+          <button
+            id="header1"
+            type="button"
+            aria-expanded="true"
+            aria-controls="panel1"
+            class="flex justify-between w-full mb-2"
+          >
+            <span class="text-lg font-medium text-neutral-900">Features</span>
+            <i
+              class="ri-indeterminate-circle-line text-xl text-neutral-400"
+            ></i>
+          </button>
+          <div id="panel1" class="" aria-labelledby="header1" role="region">
             <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
               <li>Designed for comfort and durability.</li>
               <li>Soft, breathable fabric ideal for travel and adventure.</li>
@@ -289,18 +270,26 @@
               <li>Made with eco-conscious materials.</li>
             </ul>
           </div>
-          <!-- Toggle to collaspe button -->
-          <button class="text-xl text-neutral-400 flex">
-            <i class="ri-indeterminate-circle-line"></i>
-          </button>
+          <hr class="mt-8" />
         </div>
 
         <!-- Fabric & Care -->
-        <div class="mb-8 flex justify-between">
-          <div class="">
-            <p class="text-lg font-medium text-neutral-900 mb-2">
-              Fabric & Care
-            </p>
+        <div class="mb-8">
+          <button
+            id="header2"
+            type="button"
+            aria-expanded="true"
+            aria-controls="panel2"
+            class="flex justify-between w-full mb-2"
+          >
+            <span class="text-lg font-medium text-neutral-900"
+              >Fabric & Care</span
+            >
+            <i
+              class="ri-indeterminate-circle-line text-xl text-neutral-400"
+            ></i>
+          </button>
+          <div id="panel2" class="" role="region" aria-labelledby="header2">
             <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
               <li>Machine wash cold on a gentle cycle.</li>
               <li>Tumble dry low or hang to dry.</li>
@@ -308,17 +297,25 @@
               <li>Iron on a low setting if necessary.</li>
             </ul>
           </div>
-          <!-- Toggle to collaspe button -->
-          <button class="text-xl text-neutral-400 flex">
-            <i class="ri-indeterminate-circle-line"></i>
-          </button>
+          <hr class="mt-8" />
         </div>
 
         <!-- Shipping -->
-        <div class="flex justify-between">
-          <div class="">
-            <p class="text-lg font-medium text-neutral-900 mb-2">Shipping</p>
-            <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[90%]">
+        <div class="mb-8">
+          <button
+            id="header3"
+            type="button"
+            aria-expanded="true"
+            aria-controls="panel3"
+            class="flex justify-between w-full mb-2"
+          >
+            <span class="text-lg font-medium text-neutral-900">Shipping</span>
+            <i
+              class="ri-indeterminate-circle-line text-xl text-neutral-400"
+            ></i>
+          </button>
+          <div id="panel3" class="" role="region" aria-labelledby="header3">
+            <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
               <li>
                 Free standard shipping on all orders - no minimum spend
                 required.
@@ -330,10 +327,6 @@
               </li>
             </ul>
           </div>
-          <!-- Toggle to collaspe button -->
-          <button class="text-xl text-neutral-400 flex">
-            <i class="ri-indeterminate-circle-line"></i>
-          </button>
         </div>
       </div>
     </div>
