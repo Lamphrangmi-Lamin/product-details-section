@@ -8,6 +8,7 @@ const productImgMain = document.getElementById("product-img-main");
 const colorSwatches = document.getElementById("color-swatches");
 const colorOption = document.getElementById("color-option");
 const accordionContainer = document.getElementById("accordion-container");
+const sizesSelection = document.getElementById("sizes-selection");
 
 async function fetchProductDetails(productId) {
   const baseUrl =
@@ -21,7 +22,7 @@ async function fetchProductDetails(productId) {
 
 async function main() {
   try {
-    const data = await fetchProductDetails("urban-drift-bucket-hat");
+    const data = await fetchProductDetails("voyager-hoodie");
 
     productName.innerText = data.name;
     productSpiel.innerText = data.description;
@@ -30,12 +31,14 @@ async function main() {
     starsContainer.innerHTML = renderStars(data.rating);
 
     const defaultColor = data.images[0]?.color;
-    const defaultFilteredImages = filterProductImgs(data.images, defaultColor)
+    const defaultFilteredImages = filterProductImgs(data.images, defaultColor);
     productGallery.innerHTML = renderProductImgsList(defaultFilteredImages);
     productImgMain.src = defaultFilteredImages[0]?.image_url;
 
     colorSwatches.innerHTML = renderColorSwatches(data.colors);
     accordionContainer.innerHTML = renderInfo(data.info);
+
+    sizesSelection.innerHTML = renderSizeOptions(data.sizes);
 
     // Event listeners
     const accordionHeaders =
@@ -161,6 +164,29 @@ function renderInfo(infoData) {
         </div>
         ${index !== arr.length - 1 ? '<hr class="mt-8" />' : ""}
         </div>`,
+    )
+    .join("");
+}
+
+function renderSizeOptions(sizesArr) {
+  return sizesArr
+    .map(
+      (size) => `
+    <div class="flex justify-center items-center">
+    <input
+    class="sr-only peer"
+    id="size-${size}"
+    type="radio"
+    name="size"
+    value="${size}"
+    />
+    <label
+    class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600 hover:bg-neutral-50 hover:text-neutral-950 peer-focus:bg-neutral-50 peer-focus:text-neutral-950 peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0 uppercase"
+    for="size-${size}"
+    >${size[0].toLowerCase() == "x" ? size : size[0]}</label
+    >
+    </div>
+    `,
     )
     .join("");
 }
