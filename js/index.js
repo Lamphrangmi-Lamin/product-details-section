@@ -9,6 +9,7 @@ const colorSwatches = document.getElementById("color-swatches");
 const colorOption = document.getElementById("color-option");
 const accordionContainer = document.getElementById("accordion-container");
 const sizesSelection = document.getElementById("sizes-selection");
+const sizesOptionTitle = document.getElementById("size-option-title");
 
 async function fetchProductDetails(productId) {
   const baseUrl =
@@ -183,7 +184,8 @@ function renderSizeOptions(sizesArr) {
     <label
     class="px-5 py-3 rounded ring-1 ring-neutral-200 peer-checked:ring-indigo-600 hover:bg-neutral-50 hover:text-neutral-950 peer-focus:bg-neutral-50 peer-focus:text-neutral-950 peer-disabled:bg-neutral-100 peer-disabled:text-neutral-400 peer-disabled:drop-shadow-none peer-disabled:ring-0 uppercase"
     for="size-${size}"
-    >${size[0].toLowerCase() == "x" ? size : size[0]}</label
+    >${formatSize(size)}
+    </label
     >
     </div>
     `,
@@ -204,8 +206,16 @@ function toggleAccordion(header) {
   activeIcon.classList.toggle("ri-add-circle-line");
 }
 
+// Helper functions
 function filterProductImgs(imagesArr, color) {
   return imagesArr.filter((img) => img.color === color);
+}
+
+function formatSize(size) {
+    if (typeof size === "number") return size;
+    const firstChar = size[0].toUpperCase();
+    if (firstChar === 'X') return size;
+    return firstChar;
 }
 
 // Event listeners
