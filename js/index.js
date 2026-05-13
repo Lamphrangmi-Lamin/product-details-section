@@ -8,7 +8,6 @@ const productImgMain = document.getElementById("product-img-main");
 const colorSwatches = document.getElementById("color-swatches");
 const colorOption = document.getElementById("color-option");
 const accordionContainer = document.getElementById("accordion-container");
-// console.log(colorSwatches)
 
 async function fetchProductDetails(productId) {
   const baseUrl =
@@ -22,24 +21,39 @@ async function fetchProductDetails(productId) {
 
 async function main() {
   try {
-    const data = await fetchProductDetails("voyager-hoodie");
-    // console.log(data);
+    const data = await fetchProductDetails("urban-drift-bucket-hat");
 
     productName.innerText = data.name;
     productSpiel.innerText = data.description;
     reviewCount.innerText = data.reviews;
     ratingVal.innerText = Number(data.rating).toFixed(1);
     starsContainer.innerHTML = renderStars(data.rating);
-    productGallery.innerHTML = renderProductImgsList(data.images);
-    productImgMain.src = data.images[0].image_url;
+
+    const defaultColor = data.images[0]?.color;
+    const defaultFilteredImages = filterProductImgs(data.images, defaultColor)
+    productGallery.innerHTML = renderProductImgsList(defaultFilteredImages);
+    productImgMain.src = defaultFilteredImages[0]?.image_url;
 
     colorSwatches.innerHTML = renderColorSwatches(data.colors);
-
     accordionContainer.innerHTML = renderInfo(data.info);
-    const accordionHeaders = accordionContainer.querySelectorAll("[aria-controls]");
+
+    // Event listeners
+    const accordionHeaders =
+      accordionContainer.querySelectorAll("[aria-controls]");
     accordionHeaders.forEach((header) =>
       header.addEventListener("click", () => toggleAccordion(header)),
     );
+
+    colorSwatches.addEventListener("change", (e) => {
+      const clickedElem = e.target.matches('input[type="radio"]');
+      if (clickedElem) {
+        const color = e.target.value;
+        const filteredImgs = filterProductImgs(data.images, color);
+        productImgMain.src = filteredImgs[0].image_url;
+        productGallery.innerHTML = renderProductImgsList(filteredImgs);
+      }
+    });
+    // Error handling
   } catch (error) {
     console.log(error);
   }
@@ -89,7 +103,7 @@ function renderColorSwatches(colorOptions) {
   return colorOptions
     .map(
       (color, index) => `
-    <label for="${color}" class="relative">
+    <label for="${color}" class="color-option relative">
         <input
         ${index === 0 ? "checked" : ""}
         class="peer sr-only"
@@ -135,15 +149,15 @@ function renderInfo(infoData) {
         ></i>
         </button>
         <div id="panel${index}" class="hidden" aria-labelledby="header${index}" role="region">
+        <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
         ${info.description
           .map(
             (item) => `
-            <ul class="text-neutral-600 list-disc ml-5 max-w-64 md:max-w-[95%]">
             <li>${item}</li>
-        </ul>
         `,
           )
           .join("")}
+        </ul>
         </div>
         ${index !== arr.length - 1 ? '<hr class="mt-8" />' : ""}
         </div>`,
@@ -162,6 +176,10 @@ function toggleAccordion(header) {
   activePanel.classList.toggle("hidden");
   activeIcon.classList.toggle("ri-indeterminate-circle-line");
   activeIcon.classList.toggle("ri-add-circle-line");
+}
+
+function filterProductImgs(imagesArr, color) {
+  return imagesArr.filter((img) => img.color === color);
 }
 
 // Event listeners
